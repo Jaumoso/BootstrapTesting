@@ -84,15 +84,93 @@
                     <h1>Ristorante con Fusion</h1>
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
-                <div class="col-12 col-sm align-self-center">
+                <div class="col-12 col-sm-3 align-self-center">
                     <img src="img/logo.png" alt="Logo" class="img-fluid">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a href="#Reserve" class="btn bg-warning btn-lg btn-block" data-toggle="tooltip" data-html="true" title="Or call us at <br> <strong>+852 12345678 </strong>" data-placement="bottom" style="color: black;">Reserve Table</a>
+                    <!-- <a href="#Reserve" class="btn bg-warning btn-lg btn-block" data-toggle="tooltip" data-html="true" data-toggle="modal" data-target="#reserveModal" title="Or call us at <br> <strong>+852 12345678 </strong>" data-placement="bottom" style="color: black;">Reserve Table</a> -->
+                    <a data-toggle="modal" data-target="#reserveModal">
+                        <span class="btn bg-warning btn-lg btn-block"> Reserve Table</span>
+                    </a>
                 </div>
             </div>
         </div>
     </header>
+
+    
+    <div id="reserveModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-g" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Reserve a Table</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="row align-items-center text-center form-group">
+                            <div class="col-3">
+                                <label for="numguests" class=" col-form-label">Number of Guests</label>
+                            </div>
+                            <div class="col-9">
+                                <div class="input-group">
+                                    <div id="guests">
+                                        <strong>
+                                            <input type="radio" name="guests" aria-label="1"> 1 
+                                            <input type="radio" name="guests" aria-label="2"> 2 
+                                            <input type="radio" name="guests" aria-label="3"> 3 
+                                            <input type="radio" name="guests" aria-label="4"> 4 
+                                            <input type="radio" name="guests" aria-label="5"> 5 
+                                            <input type="radio" name="guests" aria-label="6"> 6 
+                                        </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center text-center form-group">
+                            <div class="col-3">
+                                <label for="datetime" class=" col-form-label">Section</label>
+                            </div>
+                            <div class="col-4 form-group">
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-success active">
+                                        <input type="radio" name="smoker" id="non-smoker" autocomplete="off" checked> Non-Smoker
+                                    </label>
+                                    <label class="btn btn-danger">
+                                        <input type="radio" name="smoker" id="smoker" autocomplete="off"> Smoker
+                                    </label>
+                                </div>
+                            </div> 
+                        </div>
+
+                        <div class="row align-items-center text-center form-group">
+                            <div class="col-3">
+                                <label for="datetime" class=" col-form-label">Date and Time</label>
+                            </div>
+                            <div class="col-4 form-group">
+                                <input class="form-control" placeholder="Date" type="text" name="date" id="date">
+                            </div> 
+                            <div class="col-4 form-group">
+                                <input class="form-control" placeholder="Time" type="text" name="date" id="date">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-6 offset-3">
+                                <button type="submit" class="btn btn-secondary" data-dismiss="modal">
+                                    Cancel
+                                </button>
+                                <button type="submit" class="btn btn-primary">
+                                    Reserve
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="container">
         <div class="row row-content">
@@ -303,11 +381,11 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
-    <script>
+<!--     <script>
         $(document).ready(function(){
             $('[data-toggle="tooltip"]').tooltip();
         })
-    </script>
+    </script> -->
 </body>
 
 </html>
