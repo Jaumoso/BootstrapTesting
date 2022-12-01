@@ -31,11 +31,14 @@
                     <li class="nav-item"><a href="#" class="nav-link"><span class="fa fa-list fa-lg"></span> Menu</a></li>
                     <li class="nav-item"><a href="./contactus.html" class="nav-link"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
-                <!-- Login Navbar Button -->
+                <!-- LOGIN NAVBAR BUTTON -->
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+               <!-- <a data-toggle="modal" data-target="#loginModal">
                         <span class="fa fa-sign-in"> Login</span>
-                    </a>
+                    </a> -->
+                    <button id="loginButton" class="btn btn-sm navbar-text">
+                        <span class="fa fa-sign-in fa-lg"> Login</span>
+                    </button>
                 </span>
             </div>
         </div>
@@ -95,9 +98,13 @@
                 <!-- RESERVE TABLE BUTTON -->
                 <div class="col-12 col-sm-3 align-self-center">
                     <!-- <a href="#Reserve" class="btn bg-warning btn-lg btn-block" data-toggle="tooltip" data-html="true" data-toggle="modal" data-target="#reserveModal" title="Or call us at <br> <strong>+852 12345678 </strong>" data-placement="bottom" style="color: black;">Reserve Table</a> -->
-                    <a data-toggle="modal" data-target="#reserveModal">
+                     
+               <!-- <a data-toggle="modal" data-target="#reserveModal">
                         <span class="btn bg-warning btn-lg btn-block"> Reserve Table</span>
-                    </a>
+                    </a> -->
+                    <button id="reserveButton" class="btn btn-lg navbar-text bg-warning">
+                        <span style="color: white;">Reserve Table</span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -232,11 +239,11 @@
                         <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
                             <span class="carousel-control-prev-icon"></span>
                         </a>
-                        <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
+                        <a class="carousel-control-next" href="#mycarousel" role="button" style="z-index: 1;" data-slide="next">
                             <span class="carousel-control-next-icon"></span>
                         </a>
-                        <button id="carouselButton" class="btn btn-danger btn-sm">
-                            <span class="fa fa-pause"></span>
+                        <button id="carouselButton" class="btn btn-danger btn-sm" style="z-index: 2;">
+                            <span class="fa fa-pause" ></span>
                         </button>
                     </div>
                 </div>
@@ -364,6 +371,22 @@
             });
 
         });
+    </script>
+
+    <!-- LOGIN AND RESERVE TABLE TRIGGER SCRIPT -->
+    <script>
+        $(document).ready(function(){
+            $('#loginButton').click(function(){
+                $('#loginModal').modal('toggle');
+            });
+
+            $('#reserveButton').click(function(){
+                $('#reserveModal').modal('toggle');
+            });
+
+
+
+        })
     </script>
 
     <!-- Tooltip for Reserve Table button-->

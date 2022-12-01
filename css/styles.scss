@@ -75,3 +75,22 @@ body {
     position: absolute;
     bottom: 0px;
 }
+
+.modal-content{
+
+    background: $background-dark;
+
+    .modal-header {
+        background: $background-dark;
+        color: white;
+
+        button {
+            color: $background-pale;
+        }
+    }
+    
+    .modal-body {
+        background: $background-pale;
+    }
+}
+
